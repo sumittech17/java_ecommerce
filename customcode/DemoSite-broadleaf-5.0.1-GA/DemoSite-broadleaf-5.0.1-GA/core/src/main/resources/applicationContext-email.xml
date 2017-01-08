@@ -97,28 +97,10 @@
     </bean>
     -->
     
-    <bean id="blMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-        <property name="host"><value>smtp.gmail.com</value></property>
-        <property name="port"><value>587</value></property>
-        <property name="protocol"><value>smtp</value></property>
-        <property name="username"><value>catholicuser123@gmail.com</value></property>
-        <property name="password"><value>Catholic123=</value></property>
-        <property name="javaMailProperties">
-            <props>
-                <prop key="mail.smtp.starttls.enable">true</prop>
-                <prop key="mail.smtp.timeout">25000</prop>
-            </props>
-        </property>
-    </bean>
-    
-    <!-- <bean id="blMessageCreator" class="org.broadleafcommerce.common.email.service.message.NullMessageCreator">
+    <bean id="blMessageCreator" class="org.broadleafcommerce.common.email.service.message.NullMessageCreator">
         <constructor-arg ref="blMailSender"/>
-    </bean> -->
+    </bean>
 
-    <bean id="blMessageCreator" class="org.broadleafcommerce.common.email.service.message.ThymeleafMessageCreator">
-        <constructor-arg ref="blEmailTemplateEngine"/>
-        <constructor-arg ref="blMailSender"/>
-    </bean>
         
     <bean id="blEmailInfo" class="org.broadleafcommerce.common.email.service.info.EmailInfo">
         <property name="fromAddress"><value>support@mycompany.com</value></property>

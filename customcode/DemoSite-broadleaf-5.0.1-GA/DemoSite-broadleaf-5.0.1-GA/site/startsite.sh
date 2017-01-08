@@ -6,9 +6,6 @@
 # DEBUG_PORT - defaults to 8000
 # TOMCAT_MEMORY - Defaults to -Xmx1536
 
-export PATH=$PATH:/d/webcommerce/apache-maven-3.3.9-bin/apache-maven-3.3.9/bin/
-
-
 cwd=$(pwd)
 
 # Do an install of the core jar in case anything changed since the last restart and we're not using jrebel
@@ -22,7 +19,7 @@ cd $cwd
 mvn dependency:copy@copy-agent
 
 # Start up the embedded HSQLDB database in the background. If it's already started this won't do anything
-#mvn antrun:run@hsqldb-start &
+mvn antrun:run@hsqldb-start &
 
 # grab the path to the JRebel agent and set up a JREBEL_AGENT variable to pass to the JVM
 if [ -z ${JREBEL_PATH+x} ]; then JREBEL_AGENT=""; else JREBEL_AGENT="-agentpath:$JREBEL_PATH"; fi

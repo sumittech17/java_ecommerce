@@ -76,19 +76,19 @@
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
             <artifactId>broadleaf-admin-module</artifactId>
-        </dependency> 
+        </dependency>
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
             <artifactId>broadleaf-contentmanagement-module</artifactId>
-        </dependency> 
-       <dependency>
+        </dependency>
+        <dependency>
             <groupId>org.broadleafcommerce</groupId>
             <artifactId>broadleaf-framework-web</artifactId>
-        </dependency> 
+        </dependency>
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
             <artifactId>broadleaf-common</artifactId>
-        </dependency> 
+        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
