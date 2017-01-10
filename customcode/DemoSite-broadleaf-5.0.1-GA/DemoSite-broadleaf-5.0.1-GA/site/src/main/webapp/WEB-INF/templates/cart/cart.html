@@ -1,9 +1,9 @@
-<th:block layout:decorator="layout/fullPageLayout">
+<th:block>
     <head>
         <title>Cart</title>
     </head>
 
-    <div id="cart" class="cart_modal" layout:fragment="content" th:fragment="ajax">
+    <div id="cart" class="cart_modal" layout:fragment="content" th:fragment="ajax" >
         <table th:substituteby="cart/partials/cartProductsTable"></table>
     
         <div id="cart_total" class="group">
@@ -43,4 +43,5 @@
         
         <div id="blc-extra-data" class="hidden" th:utext="${blcextradata}" th:if="${!#strings.isEmpty(blcextradata)}"></div>
     </div>
+
 </th:block>

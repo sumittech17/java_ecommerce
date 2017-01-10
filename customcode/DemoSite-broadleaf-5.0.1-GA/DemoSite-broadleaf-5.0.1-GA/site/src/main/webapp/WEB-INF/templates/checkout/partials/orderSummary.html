@@ -13,7 +13,7 @@
             <th><span th:utext="#{cart.quantity}">Quantity</span></th>
             <th>Reserve Date</th>
             <th> <span th:utext="#{cart.price}">Price</span></th>
-            <th> <span th:utext="#{cart.totalSavings}">Total Savings</span></th>
+            <!-- <th type="hidden"> <span th:utext="#{cart.totalSavings}">Total Savings</span></th> -->
             <th><span th:utext="#{cart.total}">Total</span></th>
         </tr>
         </thead>
@@ -50,7 +50,7 @@
             <td align="center" th:utext="*{quantity}"></td>
             <td align="center" th:utext="*{START_DATE}"></td>
             <td align="center" blc:price="*{price}"></td>
-            <td align="center" th:if="*{adjustmentValue.zero}">---</td>
+           <!--  <td align="center" th:if="*{adjustmentValue.zero}">---</td> -->
 
             <td align="center" class="discount" th:unless="*{adjustmentValue.zero}" >
                 <span  align="center"  blc:price="*{totalAdjustmentValue}" class="promotion" ></span>

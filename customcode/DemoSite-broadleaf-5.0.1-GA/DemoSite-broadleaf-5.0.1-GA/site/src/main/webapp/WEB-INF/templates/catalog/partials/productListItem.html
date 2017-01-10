@@ -1,5 +1,5 @@
 <div th:if="*{featuredProduct}" class="new_badge">New!</div>
-
+<br/>
 <div class="image">
     <a th:href="@{*{url}}">
     <img th:if="*{media['primary']}" blc:src="@{*{media['primary'].url} + '?browse'}" th:alt="*{name}" />
@@ -34,9 +34,9 @@
     <div class="add_to_cart" th:classappend="${inCart or !availableInventory}? ' hidden'">
         <blc:form method="POST" th:action="@{/cart/add}">
             <input type="hidden" name="productId" th:value="*{id}" />
-            <input name="quantity" value="1" />
-            <!-- <input name="START_DATE" value="55" /> -->
-            <input type="text" id="datepicker" name="START_DATE" />
+            Qty:<input name="quantity" value="1" />
+          <!--   <input type="text" id="datepicker" name="START_DATE" /> -->
+            <br/>Date:<input type="text" class="datepick" name="START_DATE" placeholder="mm/dd/yyyy" required="required" />
             <input type="hidden" name="hasProductOptions" th:value="*{!#lists.isEmpty(productOptions)}" />
             <input type="submit" class="addToCart" th:value="#{product.buyNow}"/>
         </blc:form>
@@ -50,10 +50,10 @@
     <input type="button" class="addToCart" th:value="#{product.buyNow}" />
 </div>
 
- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $( function() {
     $( "#datepicker" ).datepicker();
   } );
-  </script>
+  </script> -->

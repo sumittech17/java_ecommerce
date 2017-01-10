@@ -9,14 +9,14 @@
         <span th:utext="#{footer.allRights}">All Rights Reserved</span>.<br />
         <a href=""><span th:utext="#{footer.customerService}">Customer Service</span></a>
     </div>
-    <div id="blc_brand">
+ <!--    <div id="blc_brand">
         <a href="http://www.broadleafcommerce.com"  >
             <img blc:src="@{/img/broadleaf-seal.png}" alt="Broadleaf Commerce" />
             <h4><span th:utext="#{footer.branding.poweredByBLC}">Powered by Broadleaf Commerce</span></h4>
             <br />
         </a>
         <p>&copy; <span th:utext="#{footer.branding.copyrightBLC}">Copyright 2013 Broadleaf Commerce</span><br /></p>
-    </div>
+    </div> -->
 
     <div th:remove="all">
         <!--
@@ -33,9 +33,13 @@
            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
                 
 	  <script>
-	  $( function() {
+	/*   $( function() {
 	    $( "#datepicker" ).datepicker({ dateFormat: "dd-mm-yyyy" }).val();
 	  } );
+	   */
+	  $('.datepick').each(function(){
+		    $(this).datepicker();
+		});
 	  </script>
 	  
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
@@ -44,6 +48,7 @@
         window.jQuery || document.write('<script src="[[@{/js/lib/jquery-1.9.1.js}]]"><\/script>');
         //]]>
     </script>
+
     
     <blc:bundle name="lib.js" 
                 mapping-prefix="/js/"
