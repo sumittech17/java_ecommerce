@@ -32,7 +32,7 @@
                     <input type="text" th:field="*{address.lastName}" class="field30 required cloneable" th:classappend="${#fields.hasErrors('address.lastName')}? 'fieldError'" />
                 </div>
                 <div class="form30 margin20">
-                    <label for="phone">Phone</label>
+                    <label for="phone">Mobile</label>
                     <span class="error_spacer" th:if="${#fields.hasErrors('address.firstName') or #fields.hasErrors('address.lastName')}">error</span>
                     <input type="tel" id="address.phonePrimary" name="address.phonePrimary" th:value="*{address.phonePrimary.phoneNumber}" class="field30 cloneable" />
                 </div>
@@ -42,7 +42,7 @@
                     <input type="text" th:field="*{address.addressLine1}" class="field50 required cloneable" th:classappend="${#fields.hasErrors('address.addressLine1')}? 'fieldError'" />
                 </div>
                 <div class="form50 margin20">
-                    <label for="address2">Address 2</label>
+                    <label for="address2">Area</label>
                     <span class="error_spacer" th:if="${#fields.hasErrors('address.addressLine1')}">error</span>
                     <input type="text" th:field="*{address.addressLine2}" class="field50 cloneable" />
                 </div>
@@ -53,12 +53,12 @@
                     <span class="error" th:if="${#fields.hasErrors('address.stateProvinceRegion')}" th:errors="*{address.stateProvinceRegion}"></span>
                     <input type="text" th:field="*{address.city}" class="field25 required cloneable" th:classappend="${#fields.hasErrors('address.city')}? 'fieldError'" />
                     <select id="state" th:field="*{address.stateProvinceRegion}" size="1" style="width: 48px;" class="required cloneable" th:classappend="${#fields.hasErrors('address.stateProvinceRegion')}? 'fieldError'">
-                        <option value="">--</option>
-                        <option th:each="state : ${states}" th:value="${state.abbreviation}" th:utext="${state.abbreviation}"></option>
+                        <option value="MP">MP</option>
+                        <!-- <option th:each="state : ${states}" th:value="${state.abbreviation}" th:utext="${state.abbreviation}"></option> -->
                     </select>
                 </div>
                 <div class="form25 margin20">
-                    <label for="postal_code">Postal Code</label>
+                    <label for="postal_code">Mobile2</label>
                     <span class="error" th:if="${#fields.hasErrors('address.postalCode')}" th:errors="*{address.postalCode}"></span>
                     <input type="text" th:field="*{address.postalCode}" class="field25 cloneable" th:classappend="${#fields.hasErrors('address.postalCode')}? 'fieldError'" />
                 </div>

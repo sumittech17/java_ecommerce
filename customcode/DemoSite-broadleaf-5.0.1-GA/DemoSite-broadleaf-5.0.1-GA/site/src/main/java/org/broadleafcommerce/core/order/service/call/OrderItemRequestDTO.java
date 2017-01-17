@@ -51,21 +51,28 @@ import java.util.Map;
 public class OrderItemRequestDTO {
 
     public Date getSTART_DATE() {
+    	System.out.println("sumit getting the start date from OIRD: "+START_DATE);
 		return START_DATE;
 	}
 
 	public void setSTART_DATE(String i) {
-		DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+		System.out.println("sumit value from UI "+i);
 		try {
 			START_DATE = df.parse(i);
+		System.out.println("sumit setting START_DATE to:"+START_DATE);
 		} catch (ParseException e) {
 			START_DATE = new Date();
 			//e.printStackTrace();
 		}
+		System.out.println("sumit setting2 START_DATE to:"+START_DATE);
 	}
 	
 	public void setSTART_DATE(Date startDate) {
+		
+		
 		// TODO Auto-generated method stub
+		System.out.println("sumit: set start date from startDate"+ startDate);
 		START_DATE = startDate;
 		
 	}

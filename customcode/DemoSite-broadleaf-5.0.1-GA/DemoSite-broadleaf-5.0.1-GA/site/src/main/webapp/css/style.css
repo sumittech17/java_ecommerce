@@ -1530,7 +1530,7 @@ ul.payment_methods li {
 
     #products li {
         width: 220px;
-        height: auto;
+        height: 400px;
         margin-left: 20px;
         text-align: center;
         float: left;
@@ -1587,7 +1587,7 @@ ul.payment_methods li {
         
         #products li .content {
             width: 220px;
-            height: 118px;
+            height: 64px;
             font: 13px/18px 'Georgia',serif;
             color: #655c5a;
             overflow: hidden;
@@ -2835,10 +2835,16 @@ and (max-width : 480px) {
 .product-option-group.colors li:hover div {border: 1px solid transparent;}
 
 /*color option color swatches*/
-.product-option-group.colors li.Silver div   {background-color: #FFFFFF;}
+.product-option-group.colors li.Silver div   {background-color: #f5f5f5;}
 .product-option-group.colors li.Black div       {background-color: #000000;}
 .product-option-group.colors li.Red div     {background-color: #DC143C;}
 .product-option-group.colors li.Blue div    {background-color:  #0000FF;}
+.product-option-group.colors li.Golden div    {background-color:  #ffc34d;}
+.product-option-group.colors li.Pink div    {background-color:  #ff33cc;}
+.product-option-group.colors li.Green div    {background-color:  #00cc00;}
+.product-option-group.colors li.Brown div    {background-color:  #800000;}
+.product-option-group.colors li.Yellow div    {background-color:  #ffff00;}
+.product-option-group.colors li.White div    {background-color:  #FFFFFF;}
 
     /*color options in Spanish*/
     .product-option-group.colors li.Plateado div   {background-color: #FFFFFF;}

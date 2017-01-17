@@ -150,7 +150,7 @@
                         <td class="label">Subtotal:</td>
                         <td class="price" blc:price="*{subTotal}"></td>
                     </tr>
-                    <tr th:unless="*{orderAdjustmentsValue.zero}">
+                     <tr th:unless="*{orderAdjustmentsValue.zero}">
                         <td class="label">Promotions:</td>
                         <td class="discount price">(<span blc:price="*{orderAdjustmentsValue}"></span>)</td>
                     </tr>
@@ -162,7 +162,7 @@
                         <td class="label">Taxes:</td>
                         <td class="price" blc:price="*{totalTax}"></td>
                     </tr>
-                    <tr class="grand-total">
+                     <tr class="grand-total">
                         <td class="label">Grand Total:</td>
                         <td class="price" blc:price="*{total}"></td>
                     </tr>

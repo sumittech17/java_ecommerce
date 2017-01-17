@@ -52,8 +52,9 @@
             </td>
             <td align="center" blc:price="*{getPriceBeforeAdjustments(true)}"></td>
             
-            <td align="center" th:utext="*{START_DATE}"></td>
-           <!--  <td align="center" th:if="*{adjustmentValue.zero}">---</td> -->
+            <!-- <td align="center" th:utext="*{START_DATE}"></td> -->
+            <td th:utext="${#dates.format(item.START_DATE, 'dd-MMM-yyyy')}"></td>
+           <!--  <td align="center" th:if="*{adjustmentValue.zero}"></td> -->
             <td align="center" class="discount" th:unless="*{adjustmentValue.zero}" >
             <span  blc:price="*{totalAdjustmentValue}" ></span>
                  <div class="productOptions" th:substituteby="catalog/partials/offers :: offers"/>

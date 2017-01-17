@@ -35,7 +35,7 @@
                 and !#fields.hasErrors('*')} ? 'hide'">
 
             <div class="left_content">
-                <input type="hidden" name="address.isoCountryAlpha2" value="US" />
+                <input type="hidden" name="address.isoCountryAlpha2" value="CA" />
 
                 <div class="form100" th:if="${showBillingInfoSection}">
                     <input id="use_billing_address" type="checkbox" th:field="*{useBillingAddress}" />
@@ -80,17 +80,15 @@
                            th:classappend="${#fields.hasErrors('address.city')}? 'fieldError'" />
                     <select id="state" th:field="*{address.stateProvinceRegion}" size="1" style="width: 48px;"
                         class="clearable" th:classappend="${#fields.hasErrors('address.stateProvinceRegion')}? 'fieldError'">
-                        <option value="">--</option>
-                        <option th:each="state : ${states}"
+                        <option value="MP">MP</option>
+                        <!-- <option th:each="state : ${states}"
                                 th:value="${state.abbreviation}"
-                                th:utext="${state.abbreviation}"></option>
+                                th:utext="${state.abbreviation}"></option> -->
                     </select>
                 </div>
 
                 <div class="form25 margin20">
-                    <label for="postal_code"><span th:utext="#{cart.postalCode}">Postal Code</span></label>
-                    <span class="error" th:if="${#fields.hasErrors('address.postalCode')}" th:errors="*{address.postalCode}"></span>
-                    <input type="text" th:field="*{address.postalCode}" class="field25 clearable" th:classappend="${#fields.hasErrors('address.postalCode')}? 'fieldError'" />
+                    <input type="hidden" id="address.postalCode" name="address.postalCode" value="452001" />
                 </div>
 
             </div>
@@ -104,7 +102,7 @@
                 <span class="error" th:if="${#fields.hasErrors('fulfillmentOptionId')}" th:errors="*{fulfillmentOptionId}"></span>
                 <table cellspacing="0" cellpadding="5" id="shippingoptions" class="checkoutTable">
                     <tr th:each="fulfillmentOption : ${fulfillmentOptions}">
-                        <td><input class="shipping_method_option" type="radio" th:field="*{fulfillmentOptionId}" th:value="${fulfillmentOption.id}" /></td>
+                        <td><input class="shipping_method_option" type="radio" th:checked="checked" th:field="*{fulfillmentOptionId}" th:value="${fulfillmentOption.id}" /></td>
                         <td>
                             <span th:utext="${fulfillmentOption.name}"/>&nbsp;(<span th:utext="${fulfillmentOption.longDescription}"/>)
                             <span th:if="${estimateResponse != null}" blc:price="${estimateResponse.fulfillmentOptionPrices.get(fulfillmentOption)}"/>
@@ -118,7 +116,8 @@
                 </div>
 
                 <div>
-                    <input id="select_shipping" type="submit" class="small dark" th:value="#{cart.selectShipping}" />
+                    <input id="select_shipping" type="submit"  onclick=
+"document.getElementById('fulfillmentOptionId1').checked = true" class="small dark" th:value="#{cart.selectShipping}" />
                 </div>
 
                 <!-- <p>

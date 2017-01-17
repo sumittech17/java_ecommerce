@@ -38,9 +38,65 @@
 	  } );
 	   */
 	  $('.datepick').each(function(){
-		    $(this).datepicker();
+		    $(this).datepicker({dateFormat: 'dd/mm/yy',minDate: 0});
+		    
 		});
 	  </script>
+<script>	  
+	  function validate_activity(sbid) 
+{   
+			console.log('id value'+sbid);
+			
+			var dpid = sbid.replace("sb", "dp");
+			var dpval = document.getElementById(dpid).value;
+
+		  // Get the Login Name value and trim it
+	//	    var name = $.trim($('.datepick').val());
+			console.log('check empty date');
+			console.log(dpval);
+		    // Check if empty or not
+		    if (dpval  === '' || dpval === null) {
+		        alert('Date of Booking is blank');
+		        this.event.preventDefault();
+		        return false;
+		    }
+		    else{
+		    	 var newdpval = dpval.split("/");
+		    	 var converteddt = newdpval[1]+"/"+newdpval[0]+"/"+newdpval[2];
+		    	 document.getElementById(dpid).value =converteddt;
+		    	return true;
+		    }
+		
+}
+</script>
+
+<script>	  
+	  function validate_mobile1() 
+{  
+		  // Get the mobile Name value and trim it
+			var name1= document.getElementById("addressphonePrimary").value;
+			console.log(name1);
+
+		    // Check if empty or not
+		    if (name1  === '' || name1 === null) {
+		        alert('Mobile1 is empty.');
+		        return false;
+		    }
+		    return true;
+}
+</script>
+
+	  <script>
+/* $('#submitaddtocart').click(function () {
+	var name = $.trim($('.datepick').val());
+
+    // Check if empty of not
+    if (name  === '') {
+        alert('Date click-field is empty.');
+        return false;
+    }
+}); */
+</script>
 	  
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
     <script th:inline="text">
@@ -48,6 +104,7 @@
         window.jQuery || document.write('<script src="[[@{/js/lib/jquery-1.9.1.js}]]"><\/script>');
         //]]>
     </script>
+
 
     
     <blc:bundle name="lib.js" 

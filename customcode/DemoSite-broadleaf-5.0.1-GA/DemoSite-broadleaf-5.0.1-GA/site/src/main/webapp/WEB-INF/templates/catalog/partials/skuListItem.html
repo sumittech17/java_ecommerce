@@ -38,9 +38,9 @@
         <blc:form method="POST" th:action="@{/cart/add}">
             <input type="hidden" name="productId" th:value="*{product.id}" />
             <input type="hidden" name="skuId" th:value="*{id}" />
-            Qty:<input name="quantity" value="1" />
+            *Qty: <input name="quantity" value="1" />
             <!-- <input name="START_DATE" value="55" /> -->
-            <br/>Date:<input type="text" class="datepick" name="START_DATE" placeholder="mm/dd/yyyy" required="required" />
+            <br/>*Date:<input type="text" class="datepick" name="START_DATE" placeholder="dd/mm/yyyy" required="required" />
             <input type="submit" class="addToCart" th:value="#{product.buyNow}"/>
         </blc:form>
     </div>

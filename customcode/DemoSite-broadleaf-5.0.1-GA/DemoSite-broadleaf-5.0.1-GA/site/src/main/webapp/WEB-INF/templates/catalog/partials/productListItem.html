@@ -32,13 +32,13 @@
     </div>
 
     <div class="add_to_cart" th:classappend="${inCart or !availableInventory}? ' hidden'">
-        <blc:form method="POST" th:action="@{/cart/add}">
+        <blc:form method="POST" th:action="@{/cart/add}" >
             <input type="hidden" name="productId" th:value="*{id}" />
-            Qty:<input name="quantity" value="1" />
+            *Qty: <input name="quantity" value="1" />
           <!--   <input type="text" id="datepicker" name="START_DATE" /> -->
-            <br/>Date:<input type="text" class="datepick" name="START_DATE" placeholder="mm/dd/yyyy" required="required" />
+            <br/>*Date:<input type="text" class="datepick" th:id="dp+*{id}" name="START_DATE" placeholder="mm/dd/yyyy" required="required" />
             <input type="hidden" name="hasProductOptions" th:value="*{!#lists.isEmpty(productOptions)}" />
-            <input type="submit" class="addToCart" th:value="#{product.buyNow}"/>
+            <input type="submit" th:id="sb+*{id}" onclick="return validate_activity(this.id); return false;" class="addToCart" th:value="#{product.buyNow}"/>
         </blc:form>
     </div>
 
@@ -50,10 +50,5 @@
     <input type="button" class="addToCart" th:value="#{product.buyNow}" />
 </div>
 
- <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script> -->
+
+

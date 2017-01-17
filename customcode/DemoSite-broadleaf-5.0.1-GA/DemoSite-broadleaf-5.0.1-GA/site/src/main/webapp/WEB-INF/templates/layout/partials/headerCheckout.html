@@ -13,7 +13,7 @@
                     </tr>
                     <tr>
                         <td blc:price="${cart.subTotal}"></td>
-                        <td class="discount" th:if="${cart.orderAdjustmentsValue.zero}">---</td>
+                         <td class="discount" th:if="${cart.orderAdjustmentsValue.zero}"></td>
                         <td class="discount" th:unless="*{cart.orderAdjustmentsValue.zero}" blc:price="${cart.orderAdjustmentsValue}"></td>
                         <td blc:price="${cart.totalTax}"></td>
                         <td blc:price="${cart.totalShipping}"></td>
@@ -32,7 +32,7 @@
                 <div class="clearfix"></div>
             </div>
 
-            <div id="logo"><h1><a th:href="@{/}">The Heat Clinic Home</a></h1></div>
+           <div id="logo"><h1><a th:href="@{/}">The Heat Clinic Home</a></h1></div>
         </div>
     </div>
 </header>

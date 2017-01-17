@@ -1,11 +1,11 @@
 <div layout:decorator="layout/fullPageNoNavLayout" layout:fragment="content">
     <head>
-        <title th:utext="|Order Confirmation ${order.orderNumber}|"></title>
+        <title th:utext="|Order Booking ${order.orderNumber}|"></title>
     </head>
 
     <div id="order_confirmation">
         <h2><span th:utext="#{confirmation.success}">Success!</span></h2>
-        <h3><span th:utext="#{confirmation.orderNum}">Order Confirmation #</span> - <span th:utext="${order.orderNumber}"/></h3>
+        <h3><span th:utext="#{confirmation.orderNum}">Order Booking #</span> - <span th:utext="${order.orderNumber}"/></h3>
         <p class="confirmation-note"><span th:utext="#{confirmation.confirmEmail.toBeSent}">A confirmation email will be sent to</span> <span th:utext="${order.emailAddress}"></span>.</p>
     </div>
 
@@ -53,9 +53,10 @@
                 </blc:product_option_display>
                 </td>
                 <td align="center" th:utext="*{quantity}"></td>
-                <td align="center" th:utext="*{START_DATE}"></td>
+  <!-- <td align="center" th:utext="*{START_DATE}"></td> -->
+            <td th:utext="${#dates.format(item.START_DATE, 'dd-MMM-yyyy')}"></td>
                 <td align="center" blc:price="*{price}"></td>
-               <!--  <td align="center" th:if="*{adjustmentValue.zero}">---</td> -->
+               <!--  <td align="center" th:if="*{adjustmentValue.zero}"></td> -->
                 <td align="center" class="discount" th:unless="*{adjustmentValue.zero}" >
                   <span  align="center"  blc:price="*{totalAdjustmentValue}" class="promotion" ></span>
                      <div class="productOptions" th:substituteby="catalog/partials/offers :: offers"></div>
@@ -75,7 +76,7 @@
                 </tr>
                 <tr>
                     <td><span th:utext="#{confirmation.promotions}">Promotions</span></td>
-                    <td class="discount" th:if="${order.orderAdjustmentsValue.zero}">---</td>
+                    <td class="discount" th:if="${order.orderAdjustmentsValue.zero}"></td>
                     <td class="discount" th:unless="*{order.orderAdjustmentsValue.zero}" blc:price="${order.orderAdjustmentsValue}"></td>
                 </tr>
                 <tr>
@@ -85,11 +86,11 @@
                 <tr>
                     <td><span th:utext="#{confirmation.shipping}">Shipping</span></td>
                     <td blc:price="${order.totalShipping}"></td>
-                </tr>
+                </tr> 
             </table>
         </div>
 
-        <div class="cart_title"><span th:utext="#{confirmation.shipping.info}">Shipping Information</span></div>
+        <div class="cart_title"><span th:utext="#{confirmation.shipping.info}">Venue Information</span></div>
 
         <div class="clearfix"></div>
 

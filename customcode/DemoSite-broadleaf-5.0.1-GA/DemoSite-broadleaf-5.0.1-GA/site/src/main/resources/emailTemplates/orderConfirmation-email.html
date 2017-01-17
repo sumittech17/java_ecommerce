@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Heat Clinic - Order Confirmation</title>
+      <title>Wedding Decor - Order Booking</title>
   </head>
 
   <body style="margin: 0; padding: 0;">
@@ -11,12 +11,12 @@
                 <table width="900" cellpadding="20" cellspacing="0" border="0" style="background-color: #fff; margin: 0 auto; margin-bottom: 60px;">
                     <tr>
                         <td  width="100%" style="font: normal 30px/30px &#39;Helvetica&#39;, sans-serif; background: #ec0035; padding: 20px;" colspan="2">
-                            The Heat Clinic
+                            The Wedding Decor
                         </td>
                     </tr>
                     <tr>
                         <td style="font: 16px/10px 'Oxygen', Helvetica, sans-serif; color: #655C5A">
-                            Thank you for your order<span th:unless="${customer.anonymous}" th:utext="${', ' + customer.firstName + ' ' + customer.lastName}" />!
+                            Thank you for your order booking<span th:unless="${customer.anonymous}" th:utext="${', ' + customer.firstName + ' ' + customer.lastName}" />!
                         </td>
                     </tr>
                     <tr>   <!-- Order summary table -->
@@ -51,7 +51,8 @@
                                             </blc:product_option_display>
                                         </td>
                                         <td align="center" th:utext="*{quantity}"></td>
-                                        <td align="center" th:utext="*{START_DATE}"></td>
+                                          <!-- <td align="center" th:utext="*{START_DATE}"></td> -->
+            <td th:utext="${#dates.format(item.START_DATE, 'dd-MMM-yyyy')}"></td>
                                         <td align="left" blc:price="*{price}"></td>
                                         <td align="center" style="color: #E40037;" th:if="*{adjustmentValue.zero}">---</td>
                                         <td align="center" style="color: #E40037;" th:unless="*{adjustmentValue.zero}" >

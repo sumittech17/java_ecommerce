@@ -93,10 +93,12 @@ public abstract class AbstractOrderItemRequest {
     }
 
     public Date getSTART_DATE() {
+    	System.out.println("sumit get AOIR setSTART_DATE"+START_DATE);
 		return START_DATE;
 	}
 
 	public void setSTART_DATE(Date sTART_DATE) {
+		System.out.println("sumit set AOIR setSTART_DATE"+sTART_DATE);
 		START_DATE = sTART_DATE;
 	}
 
