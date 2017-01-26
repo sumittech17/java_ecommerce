@@ -11,7 +11,7 @@
                 <table width="900" cellpadding="20" cellspacing="0" border="0" style="background-color: #fff; margin: 0 auto; margin-bottom: 60px;">
                     <tr>
                         <td  width="100%" style="font: normal 30px/30px &#39;Helvetica&#39;, sans-serif; background: #ec0035; padding: 20px;" colspan="2">
-                            The Wedding Decor
+                            Oye Shaadi
                         </td>
                     </tr>
                     <tr>
@@ -196,10 +196,10 @@
                                             <tr>
                                                 <td>
                                                     <h3 style="font: 14px/18px 'Oxygen', Helvetica, sans-serif; margin: 0 0 5px 0;padding: 0;">
-                                                        Payment Method
+                                                        We will call you back shortly to confirm your booking. After confirmation you will get the link to pay.
                                                     </h3>          
-                                                    Payment type: [[*{type.friendlyType}]]<br/>
-                                                    Amount paid: <span blc:price="*{amount}" />
+                                                    Payment type:  Pay after booking confirmation<br/>
+                                                    Amount to Pay: <span blc:price="*{amount}" />
                                                     <div th:if="${payment.initialTransaction != null}">
                                                         <div th:if="!*{#strings.isEmpty(initialTransaction.additionalFields['CARD_TYPE'])}">
                                                             <b th:utext="*{initialTransaction.additionalFields['CARD_TYPE']}"/><br/>

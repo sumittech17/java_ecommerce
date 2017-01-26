@@ -36,7 +36,7 @@
             <input type="hidden" name="productId" th:value="*{id}" />
             *Qty: <input name="quantity" value="1" />
           <!--   <input type="text" id="datepicker" name="START_DATE" /> -->
-            <br/>*Date:<input type="text" class="datepick" th:id="dp+*{id}" name="START_DATE" placeholder="mm/dd/yyyy" required="required" />
+            <br/>*Date:<input type="text" class="datepick" th:id="dp+*{id}" name="START_DATE" placeholder="dd/mm/yyyy" required="required" />
             <input type="hidden" name="hasProductOptions" th:value="*{!#lists.isEmpty(productOptions)}" />
             <input type="submit" th:id="sb+*{id}" onclick="return validate_activity(this.id); return false;" class="addToCart" th:value="#{product.buyNow}"/>
         </blc:form>

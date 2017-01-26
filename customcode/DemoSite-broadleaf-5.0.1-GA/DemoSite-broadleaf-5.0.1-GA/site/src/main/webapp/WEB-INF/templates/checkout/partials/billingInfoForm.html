@@ -88,7 +88,7 @@
             <div class="form25 margin20">
                 <label for="postal_code"><span th:utext="#{cart.postalCode}">Postal Code</span></label>
                 <span class="error" th:if="${#fields.hasErrors('address.postalCode')}" th:errors="*{address.postalCode}"></span>
-                <input type="text"
+                <input type="text" value="."
                        th:field="*{address.postalCode}"
                        class="field25 cloneable"
                        th:classappend="${#fields.hasErrors('address.postalCode')}? 'fieldError'" />

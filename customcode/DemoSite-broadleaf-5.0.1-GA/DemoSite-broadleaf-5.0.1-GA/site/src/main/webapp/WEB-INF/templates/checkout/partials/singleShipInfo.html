@@ -38,9 +38,10 @@
                 <input type="hidden" name="address.isoCountryAlpha2" value="CA" />
 
                 <div class="form100" th:if="${showBillingInfoSection}">
-                    <input id="use_billing_address" type="checkbox" th:field="*{useBillingAddress}" />
+              <!--       <input id="use_billing_address" type="checkbox" th:field="*{useBillingAddress}" />
                     <span th:utext="#{cart.useBillingInfo}">Use Billing Information</span>
-                </div>
+              -->   
+              </div>
 
                 <div class="form30">
                     <label for="firstName"><span th:utext="#{cart.firstName}">First Name</span></label> <span class="error" th:if="${#fields.hasErrors('address.firstName')}" th:errors="*{address.firstName}"></span>
@@ -88,7 +89,7 @@
                 </div>
 
                 <div class="form25 margin20">
-                    <input type="hidden" id="address.postalCode" name="address.postalCode" value="452001" />
+                    <input type="hidden" id="address.postalCode" name="address.postalCode" value="1" />
                 </div>
 
             </div>

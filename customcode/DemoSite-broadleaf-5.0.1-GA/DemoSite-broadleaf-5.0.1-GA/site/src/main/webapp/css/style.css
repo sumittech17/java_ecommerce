@@ -265,6 +265,7 @@ header {
 #header_content {
     width: 980px;
     margin: 0 auto;
+    margin-left: auto;
     position: relative;
 }
 
@@ -476,7 +477,7 @@ nav {
         z-index: 99999;
         display: none;
         width: 174px;
-        top:179px;
+        top:181px;
         border-left: 1px solid #C8C3C1;
         border-bottom: 1px solid #C8C3C1;
         border-right: 1px solid #C8C3C1;
@@ -2077,7 +2078,7 @@ and (max-width : 480px) {
             font: 12px/18px 'Open Sans', Helvetica, sans-serif;
             font-weight: 600;
             color: #342020;
-            margin: 0;
+            margin-left: 20px;
             padding: 5px 0;
             text-align: center;
             background: #e4ddd6;
@@ -2117,6 +2118,7 @@ and (max-width : 480px) {
         border: none;
         text-transform: uppercase;
         padding: 10px 0;
+        padding-top: 100px;
     }
     
     #left_column header {
@@ -2242,7 +2244,7 @@ and (max-width : 480px) {
     #products li {
         width: 320px;
         height: auto;
-        margin: 0 0 30px;
+        margin: 0 0 30px 20px;
         text-align: center;
         float: left;
         display: inline;
@@ -2500,7 +2502,7 @@ and (max-width : 480px) {
 #cart.cart_modal #cart_total {width: 240px; margin: 5px 0;}
 #cart.cart_modal #cart_total #checkout a {display: block; float: none; width: 220px; margin: 10px auto; padding: 15px 10px; text-align: center;}
 
-#cart .cart_title {float:none; margin: 10px 0; width: 280px;}
+#cart .cart_title {margin: 10px 0; width: 280px;}
 
 #cart #shipping_info, #cart #billing_info {width: 300px;}
 #cart #shipping_info .left_content, #cart #billing_info .left_content_billing {width: 280px; float: none; padding: 10px; border: none;}
