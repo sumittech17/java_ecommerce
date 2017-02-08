@@ -40,8 +40,8 @@
             <input type="hidden" name="skuId" th:value="*{id}" />
             *Qty: <input name="quantity" value="1" />
             <!-- <input name="START_DATE" value="55" /> -->
-            <br/>*Date:<input type="text" class="datepick" name="START_DATE" placeholder="dd/mm/yyyy" required="required" />
-            <input type="submit" class="addToCart" th:value="#{product.buyNow}"/>
+            <br/>*Date:<input type="text" class="datepick" th:id="dp+*{product.id}" name="START_DATE" placeholder="dd/mm/yyyy" required="required" />
+            <input type="submit" th:id="sb+*{product.id}" onclick="return validate_activity(this.id); return false;" class="addToCart" th:value="#{product.buyNow}"/>
         </blc:form>
     </div>
 
