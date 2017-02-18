@@ -9,7 +9,10 @@
     <ul th:if="${not #lists.isEmpty(menuItems)}">
         <li th:each="menuItem : ${menuItems}">
 
-            <a th:class="${menuItemStat.first}? 'home'">
+            <a th:if="${menuItem.label != 'FAQ' and menuItem.label != 'Home'}" th:class="${menuItemStat.first}? 'home'">
+                <span th:utext="${menuItem.label}"></span>
+            </a>
+            <a th:if="${menuItem.label == 'FAQ' or menuItem.label == 'Home'}" th:href="@{${menuItem.url}}" th:class="${menuItemStat.first}? 'home'">
                 <span th:utext="${menuItem.label}"></span>
             </a>
             <ul th:if="${not #lists.isEmpty(menuItem.submenu)}" class="sub-menu">

@@ -1,14 +1,21 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="google-site-verification" content="gTt9Mq4ONukNg5NjF6S5xJjk7TeDYwCQAUkQVMnpQvM" />
-    <title th:unless="${pageTitle == 'TEMPLATE'}" th:utext="${#strings.isEmpty(pageTitle) ? 'Broadleaf  - Oye Shaadi' : pageTitle}"></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="keywords"
+	content="Rental booking for every type of Wedding Shaadi Party, wedding planning company, wedding management, event management,wedding event management, wedding and event planner, oye shaadi indore, oye shaadi, wedding indore, oye shadi, wedding coordination, wedding planner, Indian marriages, wedding, shaadi, marriage, party, party indore, entertainment, theme weddings, event management, indore weddings, sounds, lights, music, decor and ambience, wedding cards, wedding venues, marriage decorators, photography, videography, concept wedding, india, indore " />
+
+<meta name="description"
+	content="Oye Shaadi: Self Manage Shaadi Party Booking Portal. We help you to turn your Dream Wedding and Event into a reality. Rental Solutions for every type of Wedding or Event, with one-stop convenience. Oye Shaadi , Indore (M.P.) " />
+
+<title th:unless="${pageTitle == 'TEMPLATE'}" th:utext="${#strings.isEmpty(pageTitle) ? 'Broadleaf  - Oye Shaadi' : pageTitle}"></title>
     
     <title th:if="${pageTitle == 'TEMPLATE'}" th:remove="tag">
         <title th:inline="text" th:include="${templateName} :: title" />
     </title>
     
-    <meta name="description" content="Broadleaf Demo Store" />
-    <meta name="author" content="Broadleaf Commerce" />
+    <meta name="author" content="Oye Shaadi" />
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />   
     <meta name="viewport" content="width=device-width" />

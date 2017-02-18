@@ -38,10 +38,10 @@
                 <input type="hidden" name="address.isoCountryAlpha2" value="CA" />
 
                 <div class="form100" th:if="${showBillingInfoSection}">
-              <!--       <input id="use_billing_address" type="checkbox" th:field="*{useBillingAddress}" />
-                    <span th:utext="#{cart.useBillingInfo}">Use Billing Information</span>
-              -->   
-              </div>
+                    <input id="use_billing_address" type="checkbox" th:field="*{useBillingAddress}"/>
+                    <span>Use Permanent Address</span>
+                 
+              </div> 
 
                 <div class="form30">
                     <label for="firstName"><span th:utext="#{cart.firstName}">First Name</span></label> <span class="error" th:if="${#fields.hasErrors('address.firstName')}" th:errors="*{address.firstName}"></span>
@@ -61,15 +61,15 @@
                 <div class="clearfix"></div>
 
                 <div class="form50">
-                    <label for="address1"><span th:utext="#{cart.address}">Address</span></label> <span class="error" th:if="${#fields.hasErrors('address.addressLine1')}" th:errors="*{address.addressLine1}"></span>
+                    <label for="address1">*Address</label> <span class="error" th:if="${#fields.hasErrors('address.addressLine1')}" th:errors="*{address.addressLine1}"></span>
                     <input type="text" th:field="*{address.addressLine1}" class="field50 clearable" th:classappend="${#fields.hasErrors('address.addressLine1')}? 'fieldError'" />
                 </div>
-                <div class="form50 margin20">
-                    <label for="address2"><span th:utext="#{cart.address2}">Address 2</span></label>
+                 <div class="form50 margin20">
+                    <label for="address2"><span>*Venue</span></label>
                     <span class="error_spacer" th:if="${#fields.hasErrors('address.addressLine1')}">error</span>
                     <input type="text" th:field="*{address.addressLine2}" class="field50 clearable" />
                 </div>
-
+ 
                 <div class="clearfix"></div>
 
                 <div class="form30">
@@ -88,9 +88,16 @@
                     </select>
                 </div>
 
-                <div class="form25 margin20">
+                 <div class="form25 margin20">
                     <input type="hidden" id="address.postalCode" name="address.postalCode" value="1" />
-                </div>
+                </div> 
+                
+                
+                <!-- <div class="form25 margin20">
+                    <label for="postal_code"><span th:utext="#{cart.postalCode}">Postal Code</span></label>
+                    <span class="error" th:if="${#fields.hasErrors('address.postalCode')}" th:errors="*{address.postalCode}"></span>
+                    <input type="text" th:field="*{address.postalCode}" class="field25 clearable" th:classappend="${#fields.hasErrors('address.postalCode')}? 'fieldError'" />
+                </div> -->
 
             </div>
 
