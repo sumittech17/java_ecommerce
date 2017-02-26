@@ -1,14 +1,14 @@
 <ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     
     <defaultCache
-        maxElementsInMemory="100000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="true"
         timeToLiveSeconds="3"/>
 
     <cache
         name="blStandardElements"
-        maxElementsInMemory="100000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="true"
         timeToLiveSeconds="3">
@@ -17,7 +17,7 @@
 
     <cache
         name="blProducts"
-        maxElementsInMemory="100000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="true"
         timeToLiveSeconds="3">
@@ -26,7 +26,7 @@
 
     <cache
         name="blCategories"
-        maxElementsInMemory="100000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="true"
         timeToLiveSeconds="3">
@@ -35,7 +35,7 @@
 
     <cache
         name="blOffers"
-        maxElementsInMemory="100000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="true"
         timeToLiveSeconds="3">
@@ -44,42 +44,42 @@
 
     <cache
         name="blInventoryElements"
-        maxElementsInMemory="100000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="true"
         timeToLiveSeconds="3"/>
 
     <cache
         name="org.hibernate.cache.internal.StandardQueryCache"
-        maxElementsInMemory="1000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="false"
         timeToLiveSeconds="3"/>
 
     <cache
         name="query.Catalog"
-        maxElementsInMemory="1000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="false"
         timeToLiveSeconds="3"/>
 
     <cache
         name="query.Offer"
-        maxElementsInMemory="1000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="false"
         timeToLiveSeconds="3"/>
 
     <cache
         name="blOrderElements"
-        maxElementsInMemory="100000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="true"
         timeToLiveSeconds="3"/>
 
      <cache
         name="blCustomerElements"
-        maxElementsInMemory="100000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="true"
         timeToLiveSeconds="3"/>
@@ -93,21 +93,21 @@
 
      <cache
         name="blCMSElements"
-        maxElementsInMemory="10000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="true"
         timeToLiveSeconds="3"/>
 
     <cache
         name="blTranslationElements"
-        maxElementsInMemory="10000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="true"
         timeToLiveSeconds="5"/>
 
     <cache
         name="blConfigurationModuleElements"
-        maxElementsInMemory="1000"
+        maxElementsInMemory="10"
         eternal="false"
         overflowToDisk="true"
         timeToLiveSeconds="3"/>
@@ -116,7 +116,7 @@
           corrrect results. It must contain at least as many entries as there are
           DB tables. -->
      <cache name="org.hibernate.cache.UpdateTimestampsCache"
-        maxElementsInMemory="5000"
+        maxElementsInMemory="100"
         eternal="true"
         overflowToDisk="true"/>
         

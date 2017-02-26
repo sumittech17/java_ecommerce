@@ -75,6 +75,20 @@
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
             <artifactId>broadleaf-framework</artifactId>
+            <exclusions>
+            	<exclusion>
+            		<artifactId>hadoop-hdfs</artifactId>
+            		<groupId>org.apache.hadoop</groupId>
+            	</exclusion>
+            	<exclusion>
+            		<artifactId>hadoop-common</artifactId>
+            		<groupId>org.apache.hadoop</groupId>
+            	</exclusion>
+            	<exclusion>
+            		<artifactId>hadoop-auth</artifactId>
+            		<groupId>org.apache.hadoop</groupId>
+            	</exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
