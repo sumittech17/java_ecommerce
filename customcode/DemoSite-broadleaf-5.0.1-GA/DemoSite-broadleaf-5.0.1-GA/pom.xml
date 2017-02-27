@@ -10,7 +10,7 @@
     <name>ecommerce</name>
     <url>http://www.blc-archetype.com</url>
     <properties>
-        <blc.version>5.0.3-GA</blc.version>
+        <blc.version>5.0.1-GA</blc.version>
         <blc.menu.version>2.0.0-GA</blc.menu.version>
         <broadleaf-sample-payment-gateway.version>2.0.0-GA</broadleaf-sample-payment-gateway.version>
 
@@ -42,8 +42,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.5.1</version>
                     <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
+                        <source>1.7</source>
+                        <target>1.7</target>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -510,3 +510,4 @@
         <module>site</module>
     </modules>
 </project>
+
