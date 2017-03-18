@@ -16,9 +16,10 @@
     <div id="content" class="width_setter group" role="main">
         <nav th:substituteby="layout/partials/nav" />
 
-        <div align="middle">
-            <img blc:src="@{/img/banners/shirt-special.jpg}" />
+	<div>
+            <img id="banners" blc:src="@{/img/banners/shirt-special.jpg}" />
         </div>
+
         
         <a th:href="@{/register}" style="text-decoration:none">
             <div id="home_feature">
